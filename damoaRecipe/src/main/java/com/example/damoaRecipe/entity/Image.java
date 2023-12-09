@@ -126,8 +126,8 @@ public class Image {
     public String toString() {
         return "Image{" +
                 "imageId='" + imageId + '\'' +
-//                ", categoryId='" + categoryId + '\'' +
-//                ", recipe=" + recipe +
+               ", categoryId='" + categoryId + '\'' +
+               ", recipe=" + recipe +
                 ", image1='" + image1 + '\'' +
                 ", image2='" + image2 + '\'' +
                 ", image3='" + image3 + '\'' +
