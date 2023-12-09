@@ -13,32 +13,33 @@ import java.util.List;
 public class Image {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "image_id", length = 255)
-    private String imageId;
+    private Long imageId;
 
-    public String getImageId() {
+    public Long getImageId() {
         return imageId;
     }
 
-    public void setImageId(String imageId) {
+    public void setImageId(Long imageId) {
         this.imageId = imageId;
     }
 
-//    public String getCategoryId() {
-//        return categoryId;
-//    }
-//
-//    public void setCategoryId(String categoryId) {
-//        this.categoryId = categoryId;
-//    }
+   public String getCategoryId() {
+       return categoryId;
+   }
 
-//    @Id
-//    @Column(name = "category_id", length = 255)
-//    private String categoryId;
-//
-//    @ManyToOne(targetEntity = Recipe.class)
-//    @JoinColumn(name = "recipe_id")
-//    private Recipe recipe;
+   public void setCategoryId(String categoryId) {
+       this.categoryId = categoryId;
+   }
+
+   @Id
+   @Column(name = "category_id", length = 255)
+   private String categoryId;
+
+   @ManyToOne
+   @JoinColumn(name = "recipe_id")
+   private Recipe recipe;
 
 
 
@@ -63,13 +64,13 @@ public class Image {
 
 
 
-//    public Recipe getRecipe() {
-//        return recipe;
-//    }
-//
-//    public void setRecipe(Recipe recipe) {
-//        this.recipe = recipe;
-//    }
+   public Recipe getRecipe() {
+       return recipe;
+   }
+
+   public void setRecipe(Recipe recipe) {
+       this.recipe = recipe;
+   }
 
 
 
